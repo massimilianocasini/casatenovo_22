@@ -1,0 +1,15 @@
+rule "L_Laboratorio ON"
+	when 
+		Item L_Laboratorio received command ON
+	then
+	val results = executeCommandLine("sudo@@knxtool@@on@@ip:localhost@@1/6/33",5000)
+    logInfo("Exec",results)
+end
+
+rule "L_Laboratorio OFF"
+	when 
+		Item L_Laboratorio received command OFF
+	then        
+	val results = executeCommandLine("sudo@@knxtool@@off@@ip:localhost@@1/6/33",5000)
+    logInfo("Exec",results)
+end

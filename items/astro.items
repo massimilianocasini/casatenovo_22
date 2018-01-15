@@ -1,0 +1,15 @@
+DateTime 	Sunrise_Time      "Alba [%1$tH:%1$tM]"  		<sunrise>	{channel="astro:sun:astroRoma:rise#start"}
+DateTime 	Sunset_Time       "Tramonto [%1$tH:%1$tM]" 		<sunset>	{channel="astro:sun:astroRoma:set#start"}
+Number  	Azimuth           "Azimuth"          			<sun>    	{channel="astro:sun:astroRoma:position#azimuth"}
+Number  	Elevation         "Elevazione"        			<sun>		{channel="astro:sun:astroRoma:position#elevation"}
+Number  	Total_Radiation   "Radiazione"        			<sun>    	{channel="astro:sun:astroRoma:radiation#total"}
+Number  	MoonPhase         "Fase"        				<moon>   	{channel="astro:moon:astroRoma:phase#illumination"}
+DateTime 	Moonrise_Time     "Sorge [%1$tH:%1$tM]"  		<moon>		{channel="astro:moon:astroRoma:rise#start"}
+DateTime 	Moonset_Time      "Tramonta [%1$tH:%1$tM]"  	<moon>		{channel="astro:moon:astroRoma:set#start"}
+Number  	MoonAzimuth       "Azimuth"          			<moon>    	{channel="astro:moon:astroRoma:position#azimuth"}
+Number  	MoonElevation     "Elevazione"        			<moon>		{channel="astro:moon:astroRoma:position#elevation"}
+DateTime 	MoonFQ_Time       "Primo Quarto [%1$td-%1$tB]"  <moon>		{channel="astro:moon:astroRoma:phase#firstQuarter"}
+DateTime 	MoonFull_Time     "Piena [%1$td-%1$tB]"  		<moon>		{channel="astro:moon:astroRoma:phase#full"}
+DateTime 	MoonTQ_Time       "Ultimo Quarto [%1$td-%1$tB]" <moon>		{channel="astro:moon:astroRoma:phase#thirdQuarter"}
+DateTime 	MoonNew_Time      "Nuova [%1$td-%1$tB]"  		<moon>		{channel="astro:moon:astroRoma:phase#new"}
+

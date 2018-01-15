@@ -1,0 +1,235 @@
+var Servo1Pos = 0
+
+
+rule "kmtA1_ON"
+	when 
+		Item kmtA1 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0001\u0001")
+end
+
+rule "kmtA1_OFF"
+	when 
+		Item kmtA1 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0001\u0000")       
+end
+
+rule "kmtA2_ON"
+	when 
+		Item kmtA2 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0002\u0001")
+end
+
+rule "kmtA2_OFF"
+	when 
+		Item kmtA2 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0002\u0000")       
+end
+
+rule "kmtA3_ON"
+	when 
+		Item kmtA3 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0003\u0001")
+end
+
+rule "kmtA3_OFF"
+	when 
+		Item kmtA3 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0003\u0000")       
+end
+
+rule "kmtA4_ON"
+	when 
+		Item kmtA4 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0004\u0001")
+end
+
+rule "kmtA4_OFF"
+	when 
+		Item kmtA4 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0004\u0000")       
+end
+
+rule "kmtA5_ON"
+	when 
+		Item kmtA5 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0005\u0001")
+end
+
+rule "kmtA5_OFF"
+	when 
+		Item kmtA5 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0005\u0000")       
+end
+
+rule "kmtA6_ON"
+	when 
+		Item kmtA6 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0006\u0001")
+end
+
+rule "kmtA6_OFF"
+	when 
+		Item kmtA6 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0006\u0000")       
+end
+
+rule "kmtA7_ON"
+	when 
+		Item kmtA7 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0007\u0001")
+end
+
+rule "kmtA7_OFF"
+	when 
+		Item kmtA7 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0007\u0000")       
+end
+
+rule "kmtA8_ON"
+	when 
+		Item kmtA8 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0008\u0001")
+end
+
+rule "kmtA8_OFF"
+	when 
+		Item kmtA8 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0008\u0000")       
+end
+
+rule "kmtB1_ON"
+	when 
+		Item kmtB1 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0009\u0001")
+end
+
+rule "kmtB1_OFF"
+	when 
+		Item kmtB1 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0009\u0000")       
+end
+
+rule "kmtB2_ON"
+	when 
+		Item kmtB2 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000A\u0001")
+end
+
+rule "kmtB2_OFF"
+	when 
+		Item kmtB2 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000A\u0000")       
+end
+
+rule "kmtB3_ON"
+	when 
+		Item kmtB3 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000B\u0001")
+end
+
+rule "kmtB3_OFF"
+	when 
+		Item kmtB3 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000B\u0000")       
+end
+
+rule "kmtB4_ON"
+	when 
+		Item kmtB4 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000C\u0001")
+end
+
+rule "kmtB4_OFF"
+	when 
+		Item kmtB4 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000C\u0000")       
+end
+
+rule "kmtB5_ON"
+	when 
+		Item kmtB5 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000D\u0001")
+end
+
+rule "kmtB5_OFF"
+	when 
+		Item kmtB5 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000D\u0000")       
+end
+
+rule "kmtB6_ON"
+	when 
+		Item kmtB6 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000E\u0001")
+end
+
+rule "kmtB6_OFF"
+	when 
+		Item kmtB6 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000E\u0000")       
+end
+
+rule "kmtB7_ON"
+	when 
+		Item kmtB7 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u000F\u0001")
+end
+
+rule "kmtB7_OFF"
+	when 
+		Item kmtB7 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u000F\u0000")       
+end
+
+rule "kmtB8_ON"
+	when 
+		Item kmtB8 received command ON
+	then
+		toSerial.sendCommand("\u00FF\u0010\u0001")
+end
+
+rule "kmtB8_OFF"
+	when 
+		Item kmtB8 received command OFF
+	then        
+		toSerial.sendCommand("\u00FF\u0010\u0000")       
+end
+
+rule "Servo1 Pos"
+	when
+		Item Servo1 changed
+	then
+		Servo1Pos = ((Servo1.state as DecimalType)).intValue
+		Servo1Pos=320-(Servo1Pos*3)
+		toSerialTTL.sendCommand(Servo1Pos+"\r")
+end

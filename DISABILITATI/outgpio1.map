@@ -1,0 +1,2 @@
+ON={"gpio1Led":"1"}
+OFF={"gpio1Led":"0"}

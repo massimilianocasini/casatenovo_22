@@ -1,0 +1,64 @@
+rule "AirHorn"
+when
+    Item AirHorn changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/AirHorn.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "ALARMBUS"
+when
+    Item ALARMBUS changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/ALARMBUS.mp3",5000)
+    logInfo("Exec",results)
+end
+
+
+rule "alarmClock"
+when
+    Item alarmClock changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/alarmClock.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "barking"
+when
+    Item barking changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/barking.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "BikeHorn"
+when
+    Item BikeHorn changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/BikeHorn.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "dixieHorn"
+when
+    Item dixieHorn changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/dixieHorn.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "doorbell"
+when
+    Item doorbell changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/doorbell.mp3",5000)
+    logInfo("Exec",results)
+end
+
+rule "trainWhistle"
+when
+    Item trainWhistle changed
+then
+	val results = executeCommandLine("sudo@@/usr/bin/omxplayer@@-o@@local@@/etc/openhab2/sounds/trainWhistle.mp3",5000)
+    logInfo("Exec",results)
+end

@@ -1,0 +1,2 @@
+String TempIntString "Temperatura Interna [%.s °C]" <temperature> {channel="exec:command:TempInterna:output"}
+Number TempIntValue "Temperatura Interna [%.1f °C]" <temperature>

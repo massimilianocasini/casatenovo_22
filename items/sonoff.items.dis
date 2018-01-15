@@ -1,0 +1,4 @@
+Switch Sonoff_CH4_1 "Sonoff 1" <light> {mqtt= ">[broker1:openhab/out/sonoff/command:state:ON:K1 ON], >[broker1:openhab/out/sonoff/command:command:OFF:K1 OFF]"}
+Switch Sonoff_CH4_2 "Sonoff 2" <light> {mqtt= ">[broker1:openhab/out/sonoff/command:state:ON:K2 ON], >[broker1:openhab/out/sonoff/command:command:OFF:K2 OFF]"}
+Switch Sonoff_CH4_3 "Sonoff 3" <light> {mqtt= ">[broker1:openhab/out/sonoff/command:state:ON:K3 ON], >[broker1:openhab/out/sonoff/command:command:OFF:K3 OFF]"}
+Switch Sonoff_CH4_4 "Sonoff 4" <light> {mqtt= ">[broker1:openhab/out/sonoff/command:state:ON:K4 ON], >[broker1:openhab/out/sonoff/command:command:OFF:K4 OFF]"}

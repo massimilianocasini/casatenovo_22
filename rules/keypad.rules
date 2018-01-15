@@ -1,0 +1,40 @@
+var Timer set_timer = null
+
+
+rule "set_password"
+when
+	System started
+then
+	Alarm_Code.postUpdate('1234')
+	Alarm_State.postUpdate('ON')
+end
+
+rule "Alarm_Code_Entered"
+when
+	Item Entered_Code received update
+then
+if (Entered_Code.state.toString==Alarm_Code.state.toString)
+{     
+	if(Alarm_State.state==ON)
+	{
+		//Turn off Alarm instantly
+		Alarm_State.postUpdate(OFF)
+	}
+	else if (Alarm_State.state==OFF)
+	{
+		if (set_timer != null)
+		{
+			set_timer.cancel()
+			set_timer = null
+		}
+		else
+		{
+			//Give user 15 seconds to get out and close door
+			set_timer = createTimer(now.plusSeconds(5)) [|
+				Alarm_State.postUpdate(ON)
+			set_timer = null
+			]
+		}
+	}
+}
+end

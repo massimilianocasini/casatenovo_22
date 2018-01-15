@@ -1,0 +1,10 @@
+
+rule "StringToInt"
+    when
+        Item TempIntString changed
+    then
+		var TempIntStr = TempIntString.state.toString
+		val TempFloat = Float::parseFloat(TempIntStr)
+		
+        TempIntValue.postUpdate(TempFloat)
+end

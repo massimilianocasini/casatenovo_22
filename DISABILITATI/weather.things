@@ -1,0 +1,21 @@
+Thing weatherunderground:weather:Roma "Quarto Casale" [ apikey="e03a53260807a696", location="42.0276477,12.453692600000068", language=IT, refresh=15 ] 
+{
+	Channels:
+        Type temperature : current#temperature [ SourceUnit="C" ]
+        Type windSpeed : current#windSpeed [ SourceUnit="kmh" ]
+        Type pressure : current#pressure [ SourceUnit="hPa" ]
+        Type dewPoint : current#dewPoint [ SourceUnit="C" ]
+        Type windChill : current#windChill [ SourceUnit="C" ]
+        Type windDirection : current#windDirection
+        Type windSpeed : current#windSpeed [ SourceUnit="kmh" ]
+        Type feelingTemperature : current#feelingTemperature [ SourceUnit="C" ]
+        Type visibility : current#visibility [ SourceUnit="km" ]
+        Type rainDay : current#precipitationDay [ SourceUnit="mm" ]
+        Type rainHour : current#precipitationHour [ SourceUnit="mm" ]
+        Type solarRadiation : current#solarRadiation
+        
+        Type probaPrecipitation : forecastToday#probaPrecipitation
+        Type minTemperature : forecastToday#minTemperature [ SourceUnit="C" ]
+        Type maxTemperature : forecastToday#maxTemperature [ SourceUnit="C" ]
+        Type rainDay : forecastToday#precipitationDay [ SourceUnit="mm" ]
+}

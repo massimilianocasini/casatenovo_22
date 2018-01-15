@@ -1,0 +1,3 @@
+String Alarm_Code "Alarm Code"
+String Entered_Code "Entered Code"
+Switch Alarm_State "Alarm State"

@@ -1,0 +1,18 @@
+//
+Strategies 
+{
+	everyMinute : "0 * * * * ?"
+	everyHour : "0 0 * * * ?"
+	everyDay : "0 0 0 * * ?"
+	
+	default = everyChange
+}
+
+/* Formato group*, item, * all items*/
+Items
+{
+	L1P, L1V, L1C, L1F : strategy = everyMinute, everyChange, restoreOnStartup
+	TempIntValue, Temperature, Humidity : strategy = everyMinute, everyChange, restoreOnStartup
+	influxdb* : strategy =  everyMinute, everyChange, restoreOnStartup
+
+}

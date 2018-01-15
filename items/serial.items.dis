@@ -1,0 +1,32 @@
+Switch kmtA1 "KMTronic A1"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA2 "KMTronic A2"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA3 "KMTronic A3"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA4 "KMTronic A4"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA5 "KMTronic A5"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA6 "KMTronic A6"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA7 "KMTronic A7"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+Switch kmtA8 "KMTronic A8"  (kmtA) {serial="/dev/ttyUSB2@9600"}
+
+Group:Switch:OR(ON, OFF) kmtA  	"KMTronic"
+
+Switch kmtB1 "KMTronic B1"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB2 "KMTronic B2"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB3 "KMTronic B3"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB4 "KMTronic B4"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB5 "KMTronic B5"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB6 "KMTronic B6"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB7 "KMTronic B7"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+Switch kmtB8 "KMTronic B8"  (kmtB) {serial="/dev/ttyUSB2@9600"}
+
+Group:Switch:OR(ON, OFF) kmtB  	"KMTronic"
+
+String toSerial "To Serial [%s]" <serial>  {serial="/dev/ttyUSB2@9600"}
+
+String Arduino "Light [%d]" <sun> (arduino) {serial="/dev/ttyUSB3@9600"}
+
+Dimmer LedRingPos "LED Ring" <incline> (arduino)
+Color LedRingColor "Color [%s]" <colorwheel> (arduino) 
+
+Dimmer Servo1 "Servo" <heating> (arduino)
+
+String toSerialTTL "LED Ring [%s]" <serial>  {serial="/dev/ttyUSB3@9600"}

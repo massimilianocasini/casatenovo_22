@@ -1,0 +1,152 @@
+sitemap guiott label="GUIOTT home" 
+{
+	Frame label="Luci" 
+        {
+        	Text label="Zona Giorno" icon=sun_clouds
+        	{			          
+              Switch item=L_Laboratorio
+              Switch item=L_SalAbatjour
+              Switch item=L_SalSX
+              Switch item=L_SalDX
+              Switch item=L_CucExt
+              Switch item=L_Cuc
+              Switch item=L_CucPens
+              Switch item=L_BagnoG
+              Switch item=L_Ingr
+              Switch item=L_CorridG
+              Switch item=L_TV
+              Switch item=Gday
+            }
+               
+    		Text label="Zona Notte" icon=moon
+        	{
+              Switch item=L_CamMat1
+              Switch item=L_CamMat2
+              Switch item=L_Testata
+              Switch item=L_Camera1
+              Switch item=L_Camera2
+              Switch item=L_BagnoN
+              Switch item=L_CorridN
+              Switch item=Gnight
+        	}  
+         } 	  
+    
+    Frame label="Tapparelle"
+        {
+        	Switch item=Shutter
+        	Text label="Zona Giorno" icon=sun_clouds
+        	{
+        	  Switch item=T_Salone
+        	  Switch item=T_Laboratorio
+        	  Switch item=T_BagnoG
+        	  Switch item=T_CucinaP
+        	  Switch item=T_CucinaF
+        	  
+        	  Switch item=ShutterDay
+        	}
+        	
+        	Text label="Zona Notte" icon=moon
+        	{
+        	  Switch item=T_Camera
+        	  Switch item=T_CameraMat
+        	  Switch item=T_BagnoN
+        	  Switch item=ShutterNight
+        	}
+        }
+            
+    
+ 	Frame label="Energia"
+        {	
+        	Text label="Energia" icon=pressure
+        	{
+        		Text item=L1V valuecolor=[>240="red",>230="orange",>220="green",<=220="orange"]
+        		Text item=L1A
+        		Text item=L1P valuecolor=[>3300="red",>3000="orange",>2500="green",<=2500="blue"]
+        		Text item=L1C valuecolor=[>0.8="green",<=0.8="orange"]
+        		Text item=L1F valuecolor=[<49="orange",>49="green",>51="orange"]
+        		Text item=L1E
+        	}
+        }
+        
+    Frame label="Meteo"
+		{		
+			Text label="Meteo" icon=climate
+			{
+				Text item=ObservationTime
+				Text item=Temperature valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=TempIntValue valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				
+				Text item=Humidity
+				Text item=Pressure
+				Text item=Temp_Feel valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Dewpoint
+				Text item=Condition
+				Text item=Rain
+				Text item=Precip_Probability
+				Text item=Precip_Total				
+				Text item=Wind
+				Text item=SolarRadiation
+				
+							
+				Text item=ObservationTime0
+				Text item=Temp_Min0	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max0	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition0	
+								
+				Text item=ObservationTime1
+				Text item=Temp_Min1	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max1	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition1
+				
+				Text item=ObservationTime2
+				Text item=Temp_Min2	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max2	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition2
+				
+				Text item=ObservationTime3
+				Text item=Temp_Min3	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max3	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition3
+				
+				Text item=ObservationTime4
+				Text item=Temp_Min4	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max4	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition4
+				
+				Text item=ObservationTime5
+				Text item=Temp_Min5	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max5	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition5	
+				
+				Text item=ObservationTime6
+				Text item=Temp_Min6	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Temp_Max6	valuecolor=[>25="red",>15="orange",>5="green",<=5="blue"]
+				Text item=Condition6	
+						
+			}
+		}
+		
+	Frame label="Astro"
+		{
+			Text label="Astro" icon=sun
+			{
+				Text item=Sunrise_Time  valuecolor=[>1="black"]
+				Text item=Sunset_Time   valuecolor=[>1="black"]
+				Text item=Azimuth 		valuecolor=[>1="black"]
+				Text item=Elevation 	valuecolor=[>1="black"]
+				Text item=Total_Radiation valuecolor=[>1="black"]
+				Text item=MoonPhase 
+				Text item=Moonrise_Time valuecolor=[>1="black"]
+				Text item=Moonset_Time valuecolor=[>1="black"]
+				Text item=MoonAzimuth 		valuecolor=[>1="black"]
+				Text item=MoonElevation 	valuecolor=[>1="black"]
+				Text item=MoonFQ_Time
+				Text item=MoonFull_Time
+				Text item=MoonTQ_Time
+				Text item=MoonNew_Time
+			}
+		}
+		
+}
+
+

@@ -1,0 +1,8 @@
+Switch Flash "Lampeggiante" <alarm> {gpio="pin:21 activelow:no initialValue:low"}
+Switch Rele2 "Relè" <fan_box> {gpio="pin:22 activelow:no initialValue:low"}
+Contact Pushbutton_left "Pulsante 1 [%s]" {gpio="pin:28 debounce:1 activelow:no"}
+Contact Pushbutton_right "Pulsante 2 [%s]" {gpio="pin:29 debounce:1 activelow:no"}
+
+Switch WiFi "WiFi" {gpio="pin:37 activelow:no initialValue:high"}
+
+

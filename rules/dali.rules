@@ -1,0 +1,18 @@
+var HSBType hsb
+var red = 0
+var green = 0
+var blue = 0
+var Cmd="/home/openhabian/dali.py"
+
+rule "HSBtoRGB"
+    when
+        Item DaliColor changed
+    then
+        hsb = DaliColor.state as HSBType
+        red   = (hsb.red * 2.55).intValue
+        green = (hsb.green * 2.55).intValue
+        blue  = (hsb.blue * 2.55).intValue
+        
+        val results = executeCommandLine(Cmd+"@@"+red+"@@"+green+"@@"+blue,5000)
+    	logInfo("Exec",results)
+end

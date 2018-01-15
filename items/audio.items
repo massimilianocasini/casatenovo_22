@@ -1,0 +1,10 @@
+Switch AirHorn "AirHorn"  <soundvolume> (audio) 
+Switch ALARMBUS "ALARMBUS"  <soundvolume> (audio)
+Switch alarmClock "alarmClock"  <soundvolume> (audio)
+Switch barking "barking"  <soundvolume> (audio)
+Switch BikeHorn "BikeHorn"  <soundvolume> (audio)
+Switch dixieHorn "dixieHorn"  <soundvolume> (audio)
+Switch doorbell "doorbell"  <soundvolume> (audio)
+Switch trainWhistle "trainWhistle"  <soundvolume> (audio)
+Player HotelCalifornia "HotelCalifornia" <player> (audio)
+

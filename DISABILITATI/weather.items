@@ -1,0 +1,67 @@
+String	 Station			"Stazione [%s]"									<home>			(Weather)	{channel="weatherunderground:weather:Roma:current#location"}
+Number   Temperature   		"Temperatura Esterna [%.1f °C]" 				<temperature> 	(Weather)	{channel="weatherunderground:weather:Roma:current#temperature"}
+Number   Temp_Min      		"Temperatura min [%.1f °C]" 					<temperature> 	(Weather)	{channel="weatherunderground:weather:Roma:current#minTemperature"}
+Number   Temp_Max      		"Temperatura max [%.1f °C]" 					<temperature> 	(Weather)  	{channel="weatherunderground:weather:Roma:current#maxTemperature"}
+
+Number   Temp_Feel     		"Temperatura Percepita [%.1f °C]"  				<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:current#feelingTemperature"}
+Number   Temp_Dewpoint  	"Punto di rugiada [%.1f °C]"        			<water> 		(Weather)	{channel="weatherunderground:weather:Roma:current#dewPoint"}
+
+Number   Humidity   		"Umidità [%d %%]"       						<humidity> 		(Weather) 	{channel="weatherunderground:weather:Roma:current#relativeHumidity"}
+Number   Pressure      		"Pressione [%d mBar]"    						<pressure> 		(Weather) 	{channel="weatherunderground:weather:Roma:current#pressure"}
+Number   Visibility    		"Visibilità [%.2f km]" 							<zoom> 			(Weather) 	{channel="weatherunderground:weather:Roma:current#visibility"}
+Number   UV_Index       	"Indice UV"             						<sun>			(Weather) 	{channel="weatherunderground:weather:Roma:current#UVIndex"}
+Number   SolarRadiation   	"Irradiazione [%.1f W/m2]"             			<sun>			(Weather) 	{channel="weatherunderground:weather:Roma:current#solarRadiation"}
+
+String   Condition      	"Condizioni [%s]"   							<sun_clouds> 	(Weather)   {channel="weatherunderground:weather:Roma:current#conditions"}
+String   Condition_ID   	"Condition id [%s]" 							<sun_clouds> 	(Weather)  	{channel="weatherunderground:weather:Roma:current#conditions"}
+DateTime ObservationTime 	"Obs [%1$td.%1$tm.%1$tY %1$tH:%1$tM]"   		<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:current#observationTime"}
+Number   Rain          		"Pioggia [%.2f mm/h]"   						<rain> 			(Weather)	{channel="weatherunderground:weather:Roma:current#precipitationHour"}
+Number   Precip_Probability "Precip % [%d %%]"  							<rain> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastToday#probaPrecipitation"}
+Number   Precip_Total    	"Precip totali [%d mm]"   						<rain> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastToday#precipitationDay"}
+Number   Wind_Speed      	"Velocità del vento [%.2f km/h]" 				<wind> 			(Weather)   {channel="weatherunderground:weather:Roma:current#windSpeed"}
+String	 Wind_Direction  	"Direzione del vento [%s]"     					<wind> 			(Weather) 	{channel="weatherunderground:weather:Roma:current#windDirection"}
+String   Wind				"Vento [%s]"									<wind>
+Image    Weather_Icon       		               											(Weather)  	{channel="weatherunderground:weather:Roma:current#icon"}
+
+DateTime ObservationTime0 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastToday#forecastTime"}
+Number   Temp_Min0      	"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastToday#minTemperature"}
+Number   Temp_Max0      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastToday#maxTemperature"}
+String   Condition0     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastToday#conditions"}
+String   Condition_ID0  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastToday#conditions"}
+
+DateTime ObservationTime1 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastTomorrow#forecastTime"}
+Number   Temp_Min1			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastTomorrow#minTemperature"}
+Number   Temp_Max1      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastTomorrow#maxTemperature"}
+String   Condition1     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastTomorrow#conditions"}
+String   Condition_ID1  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastTomorrow#conditions"}
+
+DateTime ObservationTime2 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay2#forecastTime"}
+Number   Temp_Min2			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay2#minTemperature"}
+Number   Temp_Max2      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay2#maxTemperature"}
+String   Condition2     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay2#conditions"}
+String   Condition_ID2  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay2#conditions"}
+
+DateTime ObservationTime3 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay3#forecastTime"}
+Number   Temp_Min3			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay3#minTemperature"}
+Number   Temp_Max3      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay3#maxTemperature"}
+String   Condition3     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay3#conditions"}
+String   Condition_ID3  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay3#conditions"}
+
+DateTime ObservationTime4 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay4#forecastTime"}
+Number   Temp_Min4			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay4#minTemperature"}
+Number   Temp_Max4      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay4#maxTemperature"}
+String   Condition4     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay4#conditions"}
+String   Condition_ID4  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay4#conditions"}
+
+DateTime ObservationTime5 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay5#forecastTime"}
+Number   Temp_Min5			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay5#minTemperature"}
+Number   Temp_Max5      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay5#maxTemperature"}
+String   Condition5     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay5#conditions"}
+String   Condition_ID5  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay5#conditions"}
+
+DateTime ObservationTime6 	"Previsioni [(%1$tA)]"  						<time> 			(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay6#forecastTime"}
+Number   Temp_Min6			"Temperatura min [%.2f °C]"   <					temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay6#minTemperature"}
+Number   Temp_Max6      	"Temperatura max [%.2f °C]"   					<temperature> 	(Weather) 	{channel="weatherunderground:weather:Roma:forecastDay6#maxTemperature"}
+String   Condition6     	"Condizioni [%s]"     							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay6#conditions"}
+String   Condition_ID6  	"Condizioni id [%s]"  							<sun_clouds> 	(Weather)	{channel="weatherunderground:weather:Roma:forecastDay6#conditions"}
+

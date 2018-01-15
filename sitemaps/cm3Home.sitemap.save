@@ -1,0 +1,119 @@
+ sitemap cm3Home label="CM3-Home" 
+{
+    Frame label="GPIO" 
+    {
+    	Text label="Input/Output" icon=poweroutlet
+    	{
+        	Switch item=Flash 
+        	Switch item=Rele2
+			Text item=Pushbutton_left
+			Text item=Pushbutton_right
+    	}
+    }
+    
+    Frame label="Modbus"
+    {	
+    	Text label="Energy meter" icon=line
+    	{
+       		Text item=L1V
+       		Text item=L1A
+       		Text item=L1P
+       	}
+     }
+
+    Frame label="RS485"
+    {
+    	Text label="Relays"
+    	{
+         	Switch item=kmt1  
+         	Switch item=kmt2   
+         	Switch item=kmt3   
+         	Switch item=kmt4   
+         	Switch item=kmt5   
+         	Switch item=kmt6   
+         	Switch item=kmt7   
+         	Switch item=kmt8   
+         	Switch item=kmt 
+         }                
+      }
+        
+    Frame label="1-wire"
+    {
+    	Text label="Temperature" icon=temperature
+    	{
+    		Text item=onewiretemp1Value
+    	}
+    }
+    
+    Frame label="Serial"
+    {
+    	Text label="Arduino" icon=sensor
+    	{
+    		Text item=Arduino
+    		Slider item=LedRingPos 
+    		Colorpicker item=LedRingColor
+    		Slider item=Servo1 
+    	}
+    }
+    
+    Frame label="Audio"
+    {
+    	Text label="Sound" icon=player
+    	{
+    		Switch item=AirHorn
+    		Switch item=ALARMBUS
+    		Switch item=barking
+    		Switch item=BikeHorn
+    		Switch item=dixieHorn
+    		Switch item=doorbell
+    		Switch item=trainWhistle
+    		Default item=HotelCalifornia
+    	}
+    }
+    
+    Frame label="IKEA"
+    {
+    	Text label="Tradfri" icon=lamp
+    	{
+    		Slider item=Light1 label="Light1 Brightness [%.1f %%]"
+    		Slider item=Light2 label="Light2 Brightness [%.1f %%]"
+    	}
+    }
+    
+    Frame label="KNX" 
+        {
+        	Text label="Zona Giorno" icon=sun_clouds
+        	{			          
+              Switch item=L_SalAbatjour
+              Switch item=L_SalDX
+              Switch item=L_SalSX
+              Switch item=L_CamMat1
+              Switch item=L_CamMat2
+              Switch item=L_Testata
+            }
+         } 	 
+         
+     Frame label="DALI"
+     {
+     		Text label="DALI" icon=alarm
+     		{
+     			Switch item=Dali1
+     			Switch item=Dali2
+     		}
+     	
+     } 
+     
+      Frame label="Sonoff"
+     {
+     		Text label="Sonoff" icon=alarm
+     		{
+     			Switch item=Sonoff_CH4_1
+     			Switch item=Sonoff_CH4_2
+     			Switch item=Sonoff_CH4_3
+     			Switch item=Sonoff_CH4_4
+     		}
+     	
+     } 
+}
+
+

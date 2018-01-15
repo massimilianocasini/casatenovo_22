@@ -1,0 +1,41 @@
+rule "kmt ON"
+when
+    Item Pushbutton_right changed from OPEN to CLOSED
+then
+    sendCommand(kmt, ON)
+end
+
+rule "kmt OFF"
+when
+    Item Pushbutton_right changed from CLOSED to OPEN
+then
+    sendCommand(kmt, OFF)
+end
+
+rule "Flash ON"
+when
+	Item Pushbutton_left changed from OPEN to CLOSED
+then
+    sendCommand(Flash, ON)
+end
+
+rule "Flash OFF"
+when
+	Item Pushbutton_left changed from CLOSED to OPEN 
+then
+    sendCommand(Flash, OFF)
+end
+	
+rule "Flash IR ON"
+when
+	Item FlashIR received command ON
+then
+    sendCommand(Flash, ON)
+end
+
+rule "Flash IR OFF"
+when
+	Item FlashIR received command OFF
+then
+    sendCommand(Flash, OFF)
+end

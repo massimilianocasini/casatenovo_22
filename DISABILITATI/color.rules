@@ -1,0 +1,52 @@
+var HSBType hsb
+var RingPos = 0.0
+var red = 0
+var green = 0
+var blue = 0
+var Servo1Pos = 0.0
+
+rule "HSBtoRGB"
+	when
+		Item LedRingColor changed
+	then
+		hsb = LedRingColor.state as HSBType
+		red   = (hsb.red * 2.55).intValue
+		green = (hsb.green * 2.55).intValue
+		blue  = (hsb.blue * 2.55).intValue
+		
+		toSerialTTL.sendCommand(RingPos+","+red+","+green+","+blue+","+Servo1Pos+"\r")
+end
+
+rule "Led Ring Pos"
+	when
+		Item LedRingPos changed
+	then
+		RingPos = ((LedRingPos.state as DecimalType) / 6.25).intValue
+		toSerialTTL.sendCommand(RingPos+","+red+","+green+","+blue+","+Servo1Pos+"\r")
+end
+
+rule "Servo1 Pos"
+	when
+		Item Servo1 changed
+	then
+		Servo1Pos = ((Servo1.state as DecimalType) * 1.8).intValue
+		toSerialTTL.sendCommand(RingPos+","+red+","+green+","+blue+","+Servo1Pos+"\r")
+end
+
+rule "LDR"
+	when 
+		Item Arduino changed
+	then
+		var LightStr = Arduino.state.toString
+		var Light = new java.math.BigDecimal(Integer::parseInt(LightStr))
+		
+		if (Light > 800)
+		{
+			toSerial.sendCommand("\u00FF\u0001\u0001")
+		}
+		else
+		{
+			toSerial.sendCommand("\u00FF\u0001\u0000")
+		}
+		
+end

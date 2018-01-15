@@ -1,0 +1,11 @@
+
+Group   influxdb
+
+Number WallPlug1_PT_meterKwh "Wall Plug potenza totale [%.1f KWh]" <energy> (influxdb)      {channel="zwave:device:6731f287:node3:meter_kwh"}
+Number WallPlug1_PT_sensorPower "Wall Plug sensor power [%.1f W]" <energy> (influxdb)       {channel="zwave:device:6731f287:node3:sensor_power"}
+Switch WallPlug1_PT_switchBinary "Presa" <switch> (ginfluxdb)                                {channel="zwave:device:6731f287:node3:switch_binary"}
+
+Number MotionSensor1_PT_sensorTemperature "Temperatura [%.1f °C]" <temperature> (influxdb)  {channel="zwave:device:6731f287:node10:sensor_temperature"}
+Number MotionSensor1_PT_sensorLuminance "Luminosità [%.1f]"      <rgb> (influxdb)           {channel="zwave:device:6731f287:node10:sensor_luminance"}
+Switch MotionSensor1_PT_alarmMotion "Rilevatore [MAP(zwave_motion.map):%s]" <motion>        {channel="zwave:device:6731f287:node10:alarm_motion"}
+Number MotionSensor1_PT_sensorBattery "Stato batteria [%d %%]" <battery>                    {channel="zwave:device:6731f287:node10:battery-level"}

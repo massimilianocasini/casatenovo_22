@@ -1,0 +1,51 @@
+sitemap Casatenovo label="Benvenuto a Casa" 
+{ 
+	Default item=Date icon="time"
+	Frame label="Temperatura" 
+	{
+	Text item=MotionSensor1_PT_sensorTemperature icon="temperature"
+	}
+
+	Frame label="Luminosità"
+	{
+	Text item=MotionSensor1_PT_sensorLuminance icon="rgb"
+	}
+	
+	Frame label="Rilevatore movimento"
+	{
+	Text item=MotionSensor1_PT_alarmMotion icon="motion" 
+	}
+
+	Frame label="Prese"
+	{
+	Switch item=WallPlug1_PT_switchBinary icon="light" mappings=[ON="ON", OFF="OFF"]
+	Text item=WallPlug1_PT_meterKwh icon="energy"
+	Text item=WallPlug1_PT_sensorPower icon="energy"
+	}
+
+	Frame label="Batterie"
+	{
+	Text item=MotionSensor1_PT_sensorBattery icon="battery"
+	}
+
+	Frame label="Tempo"
+	{
+	Default item=currentCondition
+	Image item=iconCondition
+	Text item=observationTime
+	Text item=observationLocation
+	Text item=station
+	Text item=currentTemperature
+	Text item=currentFeelTemp
+	Text item=currentRelativeHumidity
+	Text item=currentPressure
+	Text item=TodayProbaPrecipitation
+	Text item=forecastTodayCondition
+	Text item=forecastTodayMaxTemperature
+	Text item=forecastTimeTomorrow
+	Text item=forecastTomorrowPrecipitation
+	Text item=forecastTime2
+	Text item=forecast2Condition
+	}
+
+	}

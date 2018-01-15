@@ -1,0 +1,16 @@
+Number L1V "Tensione [%.1f V]" {modbus="Voltage:0"}
+Number L1A "Corrente [%.1f A]" {modbus="Current:0"}
+Number L1P "Potenza A [%.1f W]" {modbus="Power:0"}
+Number L1C "Cos Fi [%.2f]" {modbus="CosFi:0"}
+Number L1F "Frequenza [%.1f Hz]" {modbus="Freq:0"}
+Number L1E "Energia A [%.1f kWh]" {modbus="Ener:0"}
+
+
+
+
+
+
+
+
+
+

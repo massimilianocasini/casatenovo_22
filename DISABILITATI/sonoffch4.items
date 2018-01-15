@@ -1,0 +1,7 @@
+Switch mqttsw1 "Contatto 1" <light> {mqtt=">[mosquitto:sonoff17/in:command:*:MAP(outgpio1.map)],<[mosquitto:sonoff17/out:state:JS(sonoffgpio1Led.js)]",autoupdate="false"}
+Switch mqttsw2 "Contatto 2" <light> {mqtt=">[mosquitto:sonoff17/in:command:*:MAP(outgpio2.map)],<[mosquitto:sonoff17/out:state:JS(sonoffgpio2Led.js)]",autoupdate="false"}
+Switch mqttsw3 "Contatto 3" <light> {mqtt=">[mosquitto:sonoff17/in:command:*:MAP(outgpio3.map)],<[mosquitto:sonoff17/out:state:JS(sonoffgpio3Led.js)]",autoupdate="false"}
+Switch mqttsw4 "Contatto 4" <light> {mqtt=">[mosquitto:sonoff17/in:command:*:MAP(outgpio4.map)],<[mosquitto:sonoff17/out:state:JS(sonoffgpio4Led.js)]",autoupdate="false"}
+Switch mqttsws "LED di stato" <light> {mqtt=">[mosquitto:sonoff17/in:command:*:MAP(outgpios.map)],<[mosquitto:sonoff17/out:state:JS(sonoffgpioSLed.js)]",autoupdate="false"}
+
+

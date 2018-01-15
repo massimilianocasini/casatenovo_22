@@ -1,0 +1,61 @@
+Group:Switch:OR(ON, OFF) Gday  		"Luci zona giorno [(%d)]"<light>
+
+Switch          L_Laboratorio       "Laboratorio"           <light>        (Gday)       { knx="1/6/25" }
+Switch          L_SalAbatjour       "Salone Abatjour"       <light>        (Gday)       { knx="1/6/105" }
+Switch          L_SalDX            	"Salone DX"         	<light>        (Gday)       { knx="1/5/217" }
+Switch          L_SalSX         	"Salone SX"         	<light>        (Gday)       { knx="1/5/209" }
+Switch          L_CucExt         	"Cucina Esterno"        <light>        (Gday)       { knx="1/5/225" }
+Switch          L_Cuc         		"Cucina"        		<light>        (Gday)       { knx="1/5/233" }
+Switch          L_CucPens         	"Cucina Pensili"        <light>        (Gday)       { knx="1/5/241" }
+Switch          L_BagnoG         	"Bagno Giorno"        	<light>        (Gday)       { knx="1/6/97" }
+Switch          L_Ingr	         	"Ingresso"       		<light>        (Gday)       { knx="1/6/81" }
+Switch          L_CorridG         	"Corridoio Giorno"      <light>        (Gday)       { knx="1/6/33" }
+Switch          L_TV         		"Mobile TV"        		<light>        (Grele)       { knx="1/6/113" }
+
+Group:Switch:OR(ON, OFF) Gnight  	"Luci zona notte [(%d)]"<light>
+
+Switch          L_CamMat1       	"Camera Matrimoniale 1" <light>        (Gnight)       { knx="1/6/41" }
+Switch          L_CamMat2       	"Camera Matrimoniale 2" <light>        (Gnight)       { knx="1/6/49" }
+Switch          L_Testata	       	"Testata Letto Matr"	<light>        (Gnight)       { knx="1/6/129" }
+Switch          L_Camera1       	"Camera 1" 				<light>        (Gnight)       { knx="1/6/57" }
+Switch          L_Camera2       	"Camera 2" 				<light>        (Gnight)       { knx="1/6/65" }
+Switch          L_BagnoN         	"Bagno Notte"        	<light>        (Gnight)       { knx="1/6/73" }
+Switch          L_CorridN         	"Corridoio Notte"       <light>        (Gnight)       { knx="1/6/89" }
+
+Switch          S_LuciOff         	"Luci OFF"      		<light>        (Grele)       { knx="1/3/3" }
+Switch          S_TvOff	        	"TV OFF"      			<television-off> (Grele)     { knx="1/3/4" }
+Switch          S_TvOn	        	"TV ON"      			<television>     (Grele)     { knx="1/3/5" }
+Switch          S_TapGiu        	"Tapparelle GIU"   		<rollershutter-100> (Grele)  { knx="1/3/1" }
+Switch          S_TapSu	        	"Tapparelle SU"   		<rollershutter-0> (Grele)    { knx="1/3/2" }
+
+Group:Rollershutter:OR(UP, DOWN) Shutter  	"Tapparelle [(%d)]"<rollershutter-100>
+
+Group:Rollershutter:OR(UP, DOWN) ShutterDay  "Tapparelle zona giorno [(%d)]"<rollershutter-100>
+
+Rollershutter 	T_Salone 			"Salone" 				   			(Shutter, ShutterDay) { knx="1/5/202, 1/5/201" }
+Rollershutter 	T_Laboratorio		"Laboratorio" 			   			(Shutter, ShutterDay) { knx="1/5/250, 1/5/249" }
+Rollershutter 	T_BagnoG			"Bagno Giorno" 			   			(Shutter, ShutterDay) { knx="1/6/122, 1/6/121" }
+Rollershutter 	T_CucinaP			"Cucina Porta" 			  			(Shutter, ShutterDay) { knx="1/5/186, 1/5/185" }
+Rollershutter 	T_CucinaF			"Cucina Fin." 			  			(Shutter, ShutterDay) { knx="1/5/194, 1/5/193" }
+
+Group:Rollershutter:OR(UP, DOWN) ShutterNight  		"Tapparelle zona notte [(%d)]"<rollershutter-100>
+
+Rollershutter 	T_Camera			"Camera" 				   			(Shutter, ShutterNight) { knx="1/6/18, 1/6/17" }
+Rollershutter 	T_CameraMat			"Camera Mat." 			   			(Shutter, ShutterNight) { knx="1/6/10, 1/6/9" }
+Rollershutter 	T_BagnoN			"Bagno Notte" 			   			(Shutter, ShutterNight) { knx="1/6/2, 1/6/1" }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
