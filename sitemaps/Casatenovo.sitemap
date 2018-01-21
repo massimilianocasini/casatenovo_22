@@ -31,7 +31,7 @@ sitemap Casatenovo label="Benvenuto a Casa"
 	Frame label="Tempo"
 	{
 	Default item=currentCondition
-	Image item=iconCondition
+	// Image item=currentCondition
 	Text item=observationTime
 	Text item=observationLocation
 	Text item=station
