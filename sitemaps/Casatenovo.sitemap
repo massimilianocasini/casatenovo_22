@@ -1,9 +1,29 @@
 sitemap Casatenovo label="Benvenuto a Casa" 
+
 { 
-	Default item=Date icon="time"
+	
+	
+	Frame label=oggi
+	{
+	Text item=Date icon="time"
+	}
+
 	Frame label="Temperatura" 
 	{
 	Text item=MotionSensor1_PT_sensorTemperature icon="temperature"
+	}
+
+	Frame label="Prodino"
+	{
+	Text item=prodino0_in1
+	Text item=prodino0_in2
+	Text item=prodino0_in3
+	Text item=prodino0_in4
+	Switch item=prodino0_out1
+	Switch item=prodino0_out2
+	Switch item=prodino0_out3
+	Switch item=prodino0_out4
+	Text item=prodino_temp
 	}
 
 	Frame label="Luminosità"
@@ -48,4 +68,4 @@ sitemap Casatenovo label="Benvenuto a Casa"
 	Text item=forecast2Condition
 	}
 
-	}
+}
