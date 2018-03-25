@@ -1,2 +1,3 @@
+Ikea
 Dimmer IkeaLight1 { channel="tradfri:0100:TradfriGateway:TradfriLamp1:brightness" }
 Dimmer IkeaLight2 { channel="tradfri:0100:TradfriGateway:TradfriLamp2:brightness" }
