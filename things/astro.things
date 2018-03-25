@@ -1,2 +1,2 @@
-astro:sun:astroRoma  [ geolocation="12.453692600000068,12.453692600000068", interval=60 ]
-astro:moon:astroRoma [ geolocation="12.453692600000068,12.453692600000068", interval=60 ]
+astro:sun:astroRoma  [ geolocation="42.067,12.376,100", interval=60 ]
+astro:moon:astroRoma [ geolocation="42.067,12.376,100", interval=60 ]

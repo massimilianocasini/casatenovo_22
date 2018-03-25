@@ -11,8 +11,7 @@ Strategies
 /* Formato group*, item, * all items*/
 Items
 {
-	L1P, L1V, L1C, L1F : strategy = everyMinute, everyChange, restoreOnStartup
-	TempIntValue, Temperature, Humidity : strategy = everyMinute, everyChange, restoreOnStartup
+
 	influxdb* : strategy =  everyMinute, everyChange, restoreOnStartup
 
 }
